@@ -6,25 +6,28 @@ namespace UC_practise
     {
         static void Main(string[] args)
         {
-            int WagePerHr = 20;
+            int WagePerHR = 20;
             Random random = new Random();
             int value = random.Next(0, 3);
-            if (value == 0)
+            switch (value)
             {
-                Console.WriteLine("Employee is absent");
-                Console.WriteLine(value);
-            }
-            else if (value == 1)
-            {
-                Console.WriteLine("Eployee is for part time");
-                int salary = WagePerHr * 4;
-                Console.WriteLine(salary);
-            }
-            else
-            {
-                Console.WriteLine("Emplyoee is for full time");
-                int salary = WagePerHr * 8;
-                Console.WriteLine(salary);
+                case 0:
+                    Console.WriteLine("Employee is absent");
+                    break;
+                case 1:
+                    Console.WriteLine("Employee is present part time");
+                    int salary = WagePerHR * 4;
+                    Console.WriteLine(salary);
+                    break;
+                case 2:
+                    Console.WriteLine("Employee is present full time");
+                    int salaryfulltime = WagePerHR * 8;
+                    Console.WriteLine(salaryfulltime);
+                    break;
+
+
+
+
             }
         }
     }
